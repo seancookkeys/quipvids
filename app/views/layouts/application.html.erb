@@ -23,6 +23,7 @@
               <a class="nav-link" href="#">Link</a>
             </li>
           </ul>
+          
           <ul class="navbar-nav">
             <% if user_signed_in? %>
               <li class="nav-item">
@@ -37,24 +38,26 @@
               </li>
             <% end %>
           </ul>
+
+
         </div>
       </nav>
 
-      <% if notice.present? %>
-        <p class="notice"><%= notice %></p>
-      <% end %>
-      <% if alert.present? %>
-        <p class="alert"><%= alert %></p>
-      <% end %>
+      # <% if notice.present? %>
+      #   <p class="notice"><%= notice %></p>
+      # <% end %>
+      # <% if alert.present? %>
+      #   <p class="alert"><%= alert %></p>
+      # <% end %>
 
       <%= yield %>
     </div>
 
     <div id="footer">
       <div class="container">
-        <b>Footer here</b>
+        <b>Teachers</b>
         <br />
-        <% link_to 'Link', '#' %>
+        <%= link_to 'Teach a course', new_instructor_course_path %>
       </div>
     </div>
 
