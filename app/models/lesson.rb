@@ -10,7 +10,7 @@ class Lesson < ApplicationRecord
       if lesson.blank? && section.next_section
         return section.next_section.lessons.rank(:row_order).first
       end
-      return lesson
+      lesson
     end
   
   end
